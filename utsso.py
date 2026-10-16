@@ -1,5 +1,5 @@
 NAMA = "Reno Miftahudin"
-NIM = "NIM Kamu"
+NIM = "123240248"
 
 proses = {
     "P1": {"burst": 22, "priority": 1},
