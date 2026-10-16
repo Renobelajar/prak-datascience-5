@@ -1,3 +1,6 @@
+NAMA = "Nama Lengkap Kamu"
+NIM = "NIM Kamu"
+
 proses = {
     "P1": {"burst": 22, "priority": 1},
     "P2": {"burst": 15, "priority": 4},
@@ -10,12 +13,14 @@ proses = {
 QUANTUM = 6
 
 
-def tampilkan_hasil(nama, gantt, burst):
+def tampilkan_hasil(nama_algoritma, gantt, burst):
     selesai = {}
 
-    print(f"\n{'=' * 50}")
-    print(nama)
-    print("=" * 50)
+    print("\n" + "=" * 55)
+    print(nama_algoritma)
+    print("=" * 55)
+    print("Nama:", NAMA)
+    print("NIM:", NIM)
 
     print("\nGantt Chart:")
     print(" | ".join(
@@ -52,7 +57,7 @@ def fcfs(burst):
         waktu += bt
         gantt.append((p, mulai, waktu))
 
-    tampilkan_hasil("FCFS", gantt, burst)
+    tampilkan_hasil("A. FCFS", gantt, burst)
 
 
 def sjf(burst):
@@ -65,7 +70,7 @@ def sjf(burst):
         waktu += burst[p]
         gantt.append((p, mulai, waktu))
 
-    tampilkan_hasil("SJF", gantt, burst)
+    tampilkan_hasil("B. SJF", gantt, burst)
 
 
 def round_robin(burst, quantum):
@@ -86,7 +91,7 @@ def round_robin(burst, quantum):
         if sisa[p] > 0:
             antrean.append(p)
 
-    tampilkan_hasil("Round Robin", gantt, burst)
+    tampilkan_hasil("C. Round Robin", gantt, burst)
 
 
 def priority_scheduling(data):
@@ -108,7 +113,7 @@ def priority_scheduling(data):
         gantt.append((p, mulai, waktu))
 
     tampilkan_hasil(
-        "Priority Scheduling",
+        "D. Priority Scheduling",
         gantt,
         burst
     )
