@@ -1,4 +1,4 @@
-NAMA = "Nama Lengkap Kamu"
+NAMA = "Reno Miftahudin"
 NIM = "NIM Kamu"
 
 proses = {
